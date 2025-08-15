@@ -1,0 +1,15 @@
+services:
+  app:
+    container_name: sql-builder-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /app
+    environment:
+      COMPOSER_ALLOW_SUPERUSER: "1"
+    volumes:
+      - ./:/app
+    entrypoint: ["./entrypoint.dev.sh"]
+    command: ["tail", "-f", "/dev/null"]
+    tty: true
+    stdin_open: true

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php"
+        colors="true"
+        cacheResult="true"
+        cacheDirectory=".phpunit.cache">
+
+  <testsuites>
+    <testsuite name="Unit">
+      <directory>tests</directory>
+    </testsuite>
+  </testsuites>
+
+  <!-- Tell PHPUnit what code to measure -->
+  <source>
+    <include>
+      <directory suffix=".php">src</directory>
+    </include>
+    <exclude>
+      <directory>vendor</directory>
+      <directory>tests</directory>
+    </exclude>
+  </source>
+</phpunit>
