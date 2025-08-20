@@ -17,5 +17,6 @@ else
   log "Deps up to date; skipping composer install."
 fi
 
+log "The Docker container is up and running and ready to use."
 # 👇 Hand off to Compose's command (["tail","-f","/dev/null"]) so the container stays up
 exec "$@"
